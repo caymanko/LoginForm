@@ -54,6 +54,8 @@ input {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   z-index: 5;
+  -webkit-transition: 1s 0.7s ease-in-out;
+  transition: 1s 0.7s ease-in-out;
 }
 
 form {
@@ -78,6 +80,8 @@ form {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
+  -webkit-transition: 0.2s 0.7s ease-in-out;
+  transition: 0.2s 0.7s ease-in-out;
 }
 
 form.sign-in-form {
@@ -301,5 +305,27 @@ form.sign-up-form {
 .container.sign-up-mode .right-panel .image {
   -webkit-transform: translate(0px);
           transform: translate(0px);
+}
+
+.container.sign-up-mode .left-panel {
+  pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel {
+  pointer-events: all;
+}
+
+.container.sign-up-mode .signin-signup {
+  left: 25%;
+}
+
+.container.sign-up-mode form.sign-in-form {
+  z-index: 1;
+  opacity: 0;
+}
+
+.container.sign-up-mode form.sign-up-form {
+  z-index: 2;
+  opacity: 1;
 }
 /*# sourceMappingURL=main.css.map */
